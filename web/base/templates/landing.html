@@ -1,0 +1,282 @@
+{% load static %}
+{% load compress %}
+
+<!DOCTYPE html>
+
+<html lang="ru">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+
+        
+        {% compress css %}
+        
+           <link rel="stylesheet" href="{% static 'scss/base/landing.scss' %}" type="text/x-scss" />
+           <link rel="stylesheet" href="{% static 'scss/base/landing-circles.scss' %}" type="text/x-scss" />
+        
+        {% endcompress %}
+
+
+        <title>
+
+            Беслатный, но стильный онлайн блокнот для записи заметок
+
+        </title>
+
+        <meta name="description" content="">
+
+        <link href="{% static 'logo.jpg' %}" rel="shortcut icon" />
+
+    </head>
+
+    <body>
+        
+
+        <div class="circle-animation">
+
+            <div class="small-circle"></div>
+            <div class="medium-circle"></div>
+            <div class="big-circle"></div>
+
+        </div>
+
+        <div class="main-wrapper">
+
+            <div class="top-nav">
+
+                <div class="logo">
+
+                    <h1>Блокнотик</h1>
+
+                </div>
+
+
+                <div class="buttons">
+                    
+                    {% if logged_in %}
+
+                        <button>
+
+
+
+                        </button>
+
+                    {% else %}
+
+                        <button class="login-btn">
+
+                            Войти
+
+                        </button>
+
+                    {% endif %}
+
+
+                </div>
+
+            </div>
+
+
+            <div class="content">
+
+                <div class="text">
+
+                    <h1>
+
+                        Не теряйте голову!
+
+                    </h1>
+    
+                    <h2>
+    
+                        Создайте онлайн блокнот 
+    
+                    </h2>
+    
+    
+                    <button>
+    
+                        Создайте блокнот
+    
+                    </button>
+
+                </div>
+
+                <div class="pic">
+
+                    <img src="{% static 'pics/онлайн_блокнот.png' %}" alt="Онлайн блокнот" />
+
+                </div>
+
+            </div>
+
+            <div class="bottom-nav">
+
+
+
+            </div>
+
+        </div>
+
+
+    </body>
+
+    <style>
+
+        @font-face {
+            font-family: Comfortaa;
+            src: url("{% static 'fonts/Comfortaa.ttf' %}");
+        }
+
+        body {
+
+            font-family: Comfortaa;
+
+        }
+
+    </style>
+
+
+    <script>
+
+        function getRandomArbitrary(min, max) {
+
+            return Math.random() * (max - min) + min;
+
+        }
+
+        let colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'violet', 'pink', 'cyan'];
+        
+        var current_small_circle_color = 'purple';
+        var current_medium_circle_color = 'orange';
+        var current_big_circle_color = 'cyan';
+
+        function get_new_small_color() {
+
+            while (true) {
+
+                new_color = colors[Math.round(getRandomArbitrary(0, colors.length-1))];
+
+                if (new_color != current_small_circle_color) {
+
+                    current_small_circle_color = new_color;
+
+                    return current_small_circle_color;
+
+                }
+
+            }
+
+        }
+
+        function get_new_medium_color() {
+
+            while (true) {
+
+                new_color = colors[Math.round(getRandomArbitrary(0, colors.length-1))];
+
+                if (new_color != current_medium_circle_color) {
+
+                    current_medium_circle_color = new_color;
+                    
+                    return current_medium_circle_color;
+
+                }
+
+            }
+
+        }
+
+        function get_new_big_color() {
+
+            while (true) {
+
+                new_color = colors[Math.round(getRandomArbitrary(0, colors.length-1))];
+
+                if (new_color != current_big_circle_color) {
+
+                    current_big_circle_color = new_color;
+
+                    return current_big_circle_color;
+
+                }
+
+            }
+
+        }
+
+
+        let small_circle = $('.small-circle');
+        let medium_circle = $('.medium-circle');
+        let big_circle = $('.big-circle');
+
+        small_circle_size = 'small';
+        medium_circle_size = 'small';
+        big_circle_size = 'big';
+
+        setInterval(function() {
+
+            small_circle_size = small_circle_size == 'small' ? 'big' : 'small';
+            
+            if (small_circle_size === 'small'){
+
+                small_circle.css({'transform': 'scale('+ getRandomArbitrary(1, 1.8) +')', 'background-color': get_new_small_color()});
+
+
+            } else {
+
+                small_circle.css({'transform': 'scale('+ getRandomArbitrary(0.6, 1) +')', 'background-color': get_new_small_color()});
+
+            }
+
+        }, 1500);
+
+        setInterval(function() {
+
+            medium_circle_size = medium_circle_size == 'small' ? 'big' : 'small';
+            
+            if (medium_circle_size === 'small'){
+
+                medium_circle.css({'transform': 'scale('+ getRandomArbitrary(1, 1.3) +')', 'background-color': get_new_medium_color()});
+
+
+            } else {
+
+                medium_circle.css({'transform': 'scale('+ getRandomArbitrary(0.7, 1) +')', 'background-color': get_new_medium_color()});
+
+            }
+
+        }, 3000);
+
+        setInterval(function() {
+
+            big_circle_size = big_circle_size == 'small' ? 'big' : 'small';
+            
+            if (big_circle_size === 'small'){
+
+                big_circle.css({'transform': 'scale('+ getRandomArbitrary(1, 1.15) +')', 'background-color': get_new_big_color()});
+
+
+            } else {
+
+                big_circle.css({'transform': 'scale('+ getRandomArbitrary(0.85, 1) +')', 'background-color': get_new_big_color()});
+
+            }
+
+        }, 5000);
+
+        
+
+
+
+    </script>
+
+
+</html>

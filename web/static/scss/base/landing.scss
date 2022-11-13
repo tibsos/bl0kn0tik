@@ -1,0 +1,150 @@
+html, body {
+
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+
+    top: 0;
+    left: 0;
+
+    margin: 0;
+
+}
+
+button { 
+
+    font-family: Comfortaa;
+
+    cursor: pointer;
+
+}
+
+.main-wrapper {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    backdrop-filter: blur(50px) saturate(180%);
+    -webkit-backdrop-filter: blur(50px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.35);
+
+    z-index: 1;
+
+}
+
+
+.top-nav {
+
+    position: relative;
+
+    .logo {
+
+        position: relative;
+        left: 20px;
+        top: 20px;
+
+        width: 60%;
+
+        cursor: pointer;
+
+        float: left;
+
+        h1 {
+
+            margin: 0;
+
+            color: #000;
+
+        }
+
+    }
+
+    .buttons {
+
+        position: relative;
+        top: 12px;
+
+        width: 40%;
+
+        float: right;
+
+        .login-btn {
+
+            position: absolute;
+
+            right: 50px;
+
+            padding: 15px;
+
+            font-size: 17px;
+
+            background-color: transparent;
+
+            border: 1px solid blue;
+            border-radius: 10px;
+
+        }
+
+    }
+
+}
+
+
+.content {
+
+    position: relative;
+
+    top: 200px;
+
+    width: 100%;
+
+    .text {
+
+        position: relative;
+        left: 0;
+
+        width: 40%;
+        
+        border: 1px solid black;
+        
+        color: #000;
+
+        float: left;
+
+    }
+
+    .pic {
+
+        position: relative;
+        left: 5%;
+        bottom: 300px;
+
+        width: 60%;
+        
+        float: right;
+
+    }
+
+}
+
+
+.bottom-nav {
+
+    position: fixed;
+    
+    bottom: 30px;
+    left: 10%;
+
+    height: 50px;
+    width: 80%;
+
+
+    border: 1px solid black;
+
+}

@@ -1,0 +1,75 @@
+/* line 1, static/scss/base/landing.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* line 13, static/scss/base/landing.scss */
+button {
+  font-family: Comfortaa;
+  cursor: pointer; }
+
+/* line 21, static/scss/base/landing.scss */
+.main-wrapper {
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 1; }
+
+/* line 35, static/scss/base/landing.scss */
+.top-nav {
+  position: relative; }
+  /* line 39, static/scss/base/landing.scss */
+  .top-nav .logo {
+    position: relative;
+    left: 20px;
+    top: 20px;
+    width: 60%;
+    cursor: pointer;
+    float: left; }
+    /* line 51, static/scss/base/landing.scss */
+    .top-nav .logo h1 {
+      margin: 0; }
+  /* line 59, static/scss/base/landing.scss */
+  .top-nav .buttons {
+    position: relative;
+    top: 12px;
+    width: 40%;
+    float: right; }
+    /* line 71, static/scss/base/landing.scss */
+    .top-nav .buttons .login-btn {
+      position: absolute;
+      right: 50px;
+      padding: 15px;
+      font-size: 17px;
+      background-color: transparent;
+      border: 1px solid blue;
+      border-radius: 10px; }
+
+/* line 95, static/scss/base/landing.scss */
+.content {
+  position: relative;
+  top: 200px; }
+  /* line 102, static/scss/base/landing.scss */
+  .content .text {
+    position: relative;
+    left: 10%;
+    width: 40%;
+    float: left;
+    border: 1px solid black; }
+  /* line 115, static/scss/base/landing.scss */
+  .content .pic {
+    width: 60%;
+    float: right; }
+
+/* line 126, static/scss/base/landing.scss */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  border: 1px solid black; }

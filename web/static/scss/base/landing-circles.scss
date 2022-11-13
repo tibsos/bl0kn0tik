@@ -1,0 +1,70 @@
+
+
+.circle-animation {
+
+    position: absolute;
+
+    top: 25%;
+    left: 4%;
+
+    width: 600x;
+    height: 600px;
+
+    div {
+
+        position: relative;
+
+        border-radius: 5000px;
+
+        transform: scale(1);
+
+    }   
+
+    .small-circle {
+
+        left: 150px;
+        top: 50px;
+
+        width: 100px;
+        height: 100px;
+
+        background: purple;
+
+        transition: all 1500ms ease-in-out;
+
+        z-index: -1;
+
+    }
+
+    .medium-circle {
+
+        left: 300px;
+        top: 50px;
+
+        width: 400px;
+        height: 400px;
+
+        background: yellow;
+
+        transition: all 3000ms ease-in-out;
+
+        z-index: -2;
+
+    }
+
+    .big-circle {
+
+        bottom: 550px;
+
+        width: 600px;
+        height: 600px;
+
+        background: cyan;
+
+        transition: all 5000ms ease-in-out;
+        
+        z-index: -3
+
+    }
+
+}

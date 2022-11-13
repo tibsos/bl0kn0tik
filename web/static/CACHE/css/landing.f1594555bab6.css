@@ -1,0 +1,33 @@
+/* line 1, static/scss/base/landing.scss */
+html, body {
+  height: 100%;
+  width: 100%; }
+
+/* line 8, static/scss/base/landing.scss */
+.main-wrapper {
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 1; }
+
+/* line 25, static/scss/base/landing.scss */
+.top-nav {
+  display: inline-block; }
+  /* line 29, static/scss/base/landing.scss */
+  .top-nav .logo {
+    width: 60%; }
+  /* line 35, static/scss/base/landing.scss */
+  .top-nav .buttons {
+    width: 40%; }
+    /* line 40, static/scss/base/landing.scss */
+    .top-nav .buttons button {
+      font-family: Comfortaa; }
+    /* line 46, static/scss/base/landing.scss */
+    .top-nav .buttons .login-btn {
+      padding: 10px;
+      font-size: 17px;
+      background-color: transparent;
+      border: 1px solid blue;
+      border-radius: 50px; }

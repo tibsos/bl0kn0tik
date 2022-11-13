@@ -1,0 +1,35 @@
+/* line 3, static/scss/base/landing-circles.scss */
+.circle-animation {
+  position: absolute;
+  top: 10%;
+  left: 40%; }
+  /* line 10, static/scss/base/landing-circles.scss */
+  .circle-animation div {
+    position: relative;
+    border-radius: 5000px;
+    transform: scale(1); }
+  /* line 20, static/scss/base/landing-circles.scss */
+  .circle-animation .small-circle {
+    left: 150px;
+    top: 50px;
+    width: 100px;
+    height: 100px;
+    background: purple;
+    transition: all 1500ms ease-in-out;
+    z-index: -1; }
+  /* line 36, static/scss/base/landing-circles.scss */
+  .circle-animation .medium-circle {
+    left: 300px;
+    top: 50px;
+    width: 400px;
+    height: 400px;
+    background: green;
+    transition: all 3000ms ease-in-out;
+    z-index: -2; }
+  /* line 52, static/scss/base/landing-circles.scss */
+  .circle-animation .big-circle {
+    width: 600px;
+    height: 600px;
+    background: yellow;
+    transition: all 5000ms ease-in-out;
+    z-index: -3; }

@@ -1,0 +1,12 @@
+/* line 3, static/scss/base/landing-circles.scss */
+.circle-animation {
+  position: absolute;
+  top: 40%;
+  left: 40%; }
+  /* line 10, static/scss/base/landing-circles.scss */
+  .circle-animation .big-circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 100px;
+    background: yellow; }
