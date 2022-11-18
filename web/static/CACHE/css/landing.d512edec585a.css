@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* line 1, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0; }
+
+/* line 16, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+button {
+  font-family: Comfortaa;
+  cursor: pointer; }
+
+/* line 24, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+.main-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(50px) saturate(180%);
+  -webkit-backdrop-filter: blur(50px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.35);
+  z-index: 1; }
+
+/* line 43, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+.top-nav {
+  position: relative; }
+  /* line 47, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+  .top-nav .logo {
+    position: relative;
+    left: 20px;
+    top: 20px;
+    width: 60%;
+    cursor: pointer;
+    float: left; }
+    /* line 59, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+    .top-nav .logo h1 {
+      margin: 0;
+      color: #000; }
+  /* line 69, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+  .top-nav .buttons {
+    position: relative;
+    top: 12px;
+    width: 40%;
+    float: right; }
+    /* line 78, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+    .top-nav .buttons .login-btn {
+      position: absolute;
+      right: 50px;
+      padding: 15px;
+      font-size: 17px;
+      background-color: transparent;
+      border: 1px solid blue;
+      border-radius: 10px; }
+
+/* line 100, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+.content {
+  position: relative;
+  top: 200px;
+  width: 100%; }
+  /* line 108, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+  .content .text {
+    position: relative;
+    left: 8%;
+    width: 40%;
+    border: 1px solid transparent;
+    color: #000;
+    float: left; }
+    /* line 121, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+    .content .text h1 {
+      font-size: 50px; }
+    /* line 127, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+    .content .text h2 {
+      margin-top: 60px; }
+    /* line 133, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+    .content .text button {
+      margin-top: 50px;
+      background: none;
+      border-radius: 50px;
+      width: 200px;
+      height: 50px; }
+  /* line 149, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+  .content .pic {
+    position: relative;
+    left: 10%;
+    bottom: 480px;
+    width: 60%;
+    float: right; }
+
+/* line 164, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+.bottom-nav {
+  position: absolute;
+  bottom: 30px;
+  left: 10%;
+  height: 50px;
+  width: 80%;
+  border: 1px solid black; }
+
+@media screen and (max-width: 1500px) {
+  /* line 181, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+  img {
+    scale: 0.8; } }

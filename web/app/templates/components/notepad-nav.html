@@ -1,0 +1,25 @@
+<div class="notepads">
+
+    {% include 'components/notepads.html' %}
+
+</div>
+
+<form>
+
+    {% csrf_token %}
+
+    <button class="add-note-btn" onMouseOver="update_note()" hx-post="{% url 'app:create-note' %}" hx-target=".notepad">
+
+        +
+        
+    </button>
+    
+
+</form>
+
+
+<div class="notes">
+
+    {% include 'components/notes.html' %}
+
+</div>

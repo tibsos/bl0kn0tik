@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* line 1, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0; }
+
+/* line 14, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+button {
+  font-family: Comfortaa;
+  cursor: pointer; }
+
+/* line 22, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+.main-wrapper {
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(50px) saturate(180%);
+  -webkit-backdrop-filter: blur(50px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.35);
+  z-index: 1; }
+
+/* line 36, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+.content {
+  position: relative;
+  top: 160px;
+  width: 100%; }
+  /* line 44, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+  .content .text {
+    position: relative;
+    left: 8%;
+    width: 40%;
+    border: 1px solid transparent;
+    color: #000;
+    float: left; }
+    /* line 57, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+    .content .text h1 {
+      font-size: 50px; }
+    /* line 63, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+    .content .text h2 {
+      margin-top: 60px; }
+    /* line 69, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+    .content .text button {
+      margin-top: 50px;
+      background: none;
+      border: 2px solid black;
+      border-radius: 50px;
+      width: 200px;
+      height: 50px; }
+  /* line 86, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+  .content .pic {
+    position: relative;
+    left: 10%;
+    bottom: 450px;
+    width: 60%;
+    float: right; }
+    /* line 96, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+    .content .pic img {
+      margin: 0;
+      padding: 0; }
+
+@media screen and (max-width: 1500px) {
+  /* line 109, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/landing.scss */
+  img {
+    scale: 0.8; } }

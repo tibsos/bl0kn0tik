@@ -1,0 +1,97 @@
+
+
+.top-nav {
+
+    position: relative;
+
+    .logo {
+
+        position: relative;
+        left: 20px;
+        top: 20px;
+
+        width: 60%;
+
+        cursor: pointer;
+
+        float: left;
+
+        h1 {
+
+            margin: 0;
+
+            color: #000;
+
+        }
+
+    }
+
+    .buttons {
+
+        position: relative;
+        top: 12px;
+
+        width: 40%;
+
+        float: right;
+
+        .login-btn {
+
+            position: absolute;
+
+            right: 50px;
+
+            padding: 15px;
+
+            font-size: 17px;
+
+            background-color: transparent;
+
+            border: 2px solid blue;
+            border-radius: 50px;
+
+        }
+
+    }
+
+}
+
+
+
+
+.bottom-nav {
+
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+
+    height: 15px;
+    width: 90%;
+
+    h1 {
+
+        font-weight: normal;
+
+        font-size: 16px;
+
+        margin: 0 100px 0 0;
+
+        float: left;
+
+    }
+
+    div {
+
+        text-align: center;
+        width: 100%;
+
+    }
+
+    a {
+
+        text-decoration: none;
+        margin: 0 20px 0 0;
+
+    }
+
+}

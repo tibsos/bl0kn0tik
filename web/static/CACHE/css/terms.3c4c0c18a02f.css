@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/* line 1, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0; }
+
+/* line 8, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em; }
+
+/* line 14, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em; }
+
+/* line 20, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+li ol > li {
+  margin: 0; }
+
+/* line 24, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+li ol > li:before {
+  content: counters(item, ".") " "; }
+
+/* line 28, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+.side-nav {
+  position: relative;
+  top: 100px;
+  left: 5%;
+  width: 300px;
+  border-radius: 50px;
+  background: #fff;
+  float: left; }
+  /* line 42, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+  .side-nav a {
+    text-decoration: none;
+    color: #000; }
+  /* line 49, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+  .side-nav div {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid pink;
+    cursor: pointer; }
+    /* line 66, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+    .side-nav div h4 {
+      padding-left: 10px;
+      font-size: 18px; }
+
+/* line 77, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+.main-wrapper {
+  position: relative;
+  left: 0;
+  top: 100px;
+  width: calc(100% - 450px);
+  padding: 20px;
+  float: right;
+  border-radius: 50px;
+  background: #fff; }
+  /* line 97, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+  .main-wrapper .contents .header {
+    font-weight: bold; }
+    /* line 105, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+    .main-wrapper .contents .header ol {
+      margin-top: 20px;
+      font-weight: normal; }
+      /* line 110, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+      .main-wrapper .contents .header ol li {
+        margin-bottom: 20px; }

@@ -1,0 +1,226 @@
+HTML
+
+ <button class="font-colors">
+    
+                <p style="color:green">A</p>
+    
+            </button>
+    
+            <div class="font-colors-dropdown">
+    
+                <div class="colors">
+
+                    <button class="font-background-btn" id="#000" style="background-color: #000;"></button>
+                    <button class="font-background-btn" id="#fff" style="background-color: #fff;"></button>
+                    <button class="font-background-btn" id="#454545" style="background-color: #454545;"></button>
+                    <button class="font-background-btn" id="#999999" style="background-color: #999999;"></button>
+                    <button class="font-background-btn" id="#008080" style="background-color: #008080;"></button>
+
+                    <button class="font-background-btn" id="#FF0000" style="background-color: #FF0000;"></button>
+                    <button class="font-background-btn" id="#FFA500" style="background-color: #FFA500;"></button>
+                    <button class="font-background-btn" id="#800000" style="background-color: #800000;"></button>
+                    <button class="font-background-btn" id="#FA8072" style="background-color: #FA8072;"></button>
+                    <button class="font-background-btn" id="#E4717A" style="background-color: #E4717A;"></button>
+
+                    <button class="font-background-btn" id="#FFFF00" style="background-color: #FFFF00;"></button>
+                    <button class="font-background-btn" id="#8B8000" style="background-color: #8B8000;"></button>
+                    <button class="font-background-btn" id="#FFEA00" style="background-color: #FFEA00;"></button>
+                    <button class="font-background-btn" id="#FFFF8F" style="background-color: #FFFF8F;"></button>
+                    <button class="font-background-btn" id="#FFD700" style="background-color: #FFD700;"></button>
+
+
+                    <button class="font-background-btn" id="#00FF00" style="background-color: #00FF00;"></button>
+                    <button class="font-background-btn" id="#008000" style="background-color: #008000;"></button>
+                    <button class="font-background-btn" id="#454B1B" style="background-color: #454B1B;"></button>
+                    <button class="font-background-btn" id="#50C878" style="background-color: #50C878;"></button>
+                    <button class="font-background-btn" id="#228B22" style="background-color: #228B22;"></button>
+
+                    <button class="font-background-btn" id="#0000FF" style="background-color: #0000FF;"></button>
+                    <button class="font-background-btn" id="#00FFFF" style="background-color: #00FFFF;"></button>
+                    <button class="font-background-btn" id="#000080" style="background-color: #000080;"></button>
+                    <button class="font-background-btn" id="#4682B4" style="background-color: #4682B4;"></button>
+                    <button class="font-background-btn" id="#FF00FF" style="background-color: #FF00FF;"></button>
+
+                    <div class="custom-color">
+
+                        <p>
+
+                            Свой цвет
+
+                        </p>
+
+                    </div>
+    
+                </div>
+
+            </div>
+    
+            <button class="font-backgrounds">
+    
+                <p style="background-color:green">A</p>
+    
+            </button>
+    
+            <div class="font-backgrounds-dropdown">
+
+                <div class="colors">
+
+                    <button class="font-background-btn" id="black" style="background-color: black;"></button>
+                    <button class="font-background-btn" id="green" style="background-color: green;"></button>
+    
+                </div>
+                
+            </div>
+    
+            <div class="fonts">
+    
+                <p>Comfortaa</p>
+    
+                <div class="other-fonts">
+    
+                    <p class="font" id="Arial" class="font-family: Arial">Arial</p>
+                    <p class="font" id="Comfortaa" class="font-family: Arial">Comfortaa</p>
+                    <p class="font" id="Comfortaa" class="font-family: Arial">Comfortaa</p>
+    
+                </div>
+    
+            </div>
+
+
+
+JS
+
+    var fonts_shown = false;
+    var font_background_dropdown_shown = false;
+    var font_colors_dropdown_shown = false;
+
+       function open_toolbar() {
+
+        $('.toolbar').css('height', '350px');
+
+    }
+
+    function close_toolbar() {
+
+        $('.toolbar').css('height', '50px');
+
+    }
+
+
+    $('.fonts').click(function() {
+
+        if (fonts_shown === true) {
+
+            $('.other-fonts').hide();
+            fonts_shown = false;
+            close_toolbar();
+
+        } else {
+
+            $('.other-fonts').show();
+            fonts_shown = true;
+            open_toolbar();
+
+        }
+
+        $('.font-colors-dropdown').hide();
+        $('.font-backgrounds-dropdown').hide();
+        font_colors_dropdown_shown = false;
+        font_background_dropdown_shown = false;
+
+    });
+
+    $('.font').click(function() {
+
+        font = $(this).attr('id');
+        document.execCommand('fontName', false, font);
+        active_note_content.focus();
+
+        $('.other-fonts').hide();
+        fonts_shown = false;
+
+        close_toolbar();
+
+    });
+
+    
+
+    $('.font-backgrounds').click(function() {
+
+
+        if (font_background_dropdown_shown === true) {
+
+            $('.font-backgrounds-dropdown').hide();
+            font_background_dropdown_shown = false;
+            close_toolbar()
+
+        } else {
+
+            $('.font-backgrounds-dropdown').show();
+            font_background_dropdown_shown = true;
+            open_toolbar()
+
+        }
+
+        $('.font-colors-dropdown').hide();
+
+        $('.font-colors-dropdown').hide();
+        $('.other-fonts').hide();
+        font_colors_dropdown_shown = false;
+        fonts_shown = false;
+
+
+    });
+
+    $('.font-background-btn').click(function() {
+
+        color = $(this).attr('id');
+        document.execCommand('hiliteColor', false, color);
+        active_note_content.focus();
+
+        $('.font-backgrounds-dropdown').hide();
+
+        close_toolbar()
+
+    });
+
+    $('.font-colors').click(function() {
+
+        if (font_colors_dropdown_shown === true) {
+
+            $('.font-colors-dropdown').hide();
+            font_colors_dropdown_shown = false;
+            close_toolbar();
+
+        } else {
+
+            $('.font-colors-dropdown').show();
+            font_colors_dropdown_shown = true;
+            open_toolbar();
+
+        }
+
+        $('.font-backgrounds-dropdown').hide();
+        $('.other-fonts').hide();
+        font_background_dropdown_shown = false;
+        fonts_shown = false;
+
+    });
+
+    $('.font-color-btn').click(function() {
+
+        color = $(this).attr('id');
+        document.execCommand('foreColor', false, color);
+        active_note_content.focus();
+
+        $('.font-colors-dropdown').hide();
+        font_colors_dropdown_shown = false;
+
+        $('.toolbar').css('height', '60px');
+
+        close_toolbar()
+
+    });
+
+
+    

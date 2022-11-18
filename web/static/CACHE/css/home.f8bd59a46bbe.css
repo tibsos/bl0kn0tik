@@ -1,0 +1,290 @@
+@charset "UTF-8";
+/* line 1, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+/* line 11, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+[contenteditable]:focus {
+  outline: none; }
+
+/* line 17, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+[contenteditable]:empty:before {
+  content: attr(placeholder);
+  color: grey;
+  font-style: italic; }
+
+/* line 25, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+input:focus {
+  outline: none; }
+
+/* line 42, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+.notepad {
+  position: relative;
+  left: 2.5%;
+  top: 100px;
+  height: 80%;
+  width: 95%;
+  border: 1px solid black;
+  border-radius: 50px; }
+  /* line 56, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+  .notepad .nav {
+    width: 300px;
+    height: 100%;
+    border-right: 1px solid black;
+    border-radius: 50px;
+    float: left; }
+    /* line 66, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+    .notepad .nav .notepads {
+      position: relative;
+      top: 20px;
+      left: 10%;
+      width: 80%;
+      max-height: calc(100% - 40px);
+      border: 1px solid black;
+      border-radius: 30px;
+      overflow: auto; }
+      /* line 80, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+      .notepad .nav .notepads .active-notepad {
+        height: 60px;
+        display: flex;
+        align-items: center; }
+        /* line 87, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+        .notepad .nav .notepads .active-notepad p {
+          width: 60%;
+          float: left;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+        /* line 97, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+        .notepad .nav .notepads .active-notepad .buttons {
+          display: flex;
+          align-content: center;
+          align-items: center;
+          height: 100%;
+          margin-left: 10px; }
+          /* line 106, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+          .notepad .nav .notepads .active-notepad .buttons button {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer; }
+      /* line 123, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+      .notepad .nav .notepads .notepad-dropdown {
+        display: none; }
+        /* line 127, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+        .notepad .nav .notepads .notepad-dropdown #create-notepad-init {
+          position: relative;
+          top: 20px;
+          left: 10%;
+          width: 80%;
+          height: 35px;
+          border: none;
+          border-radius: 40px;
+          cursor: pointer;
+          font-size: 25px;
+          font-weight: bold;
+          font-family: Comfortaa; }
+        /* line 147, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+        .notepad .nav .notepads .notepad-dropdown .other-notepads {
+          position: relative;
+          top: 50px; }
+          /* line 152, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+          .notepad .nav .notepads .notepad-dropdown .other-notepads .other-notepad {
+            position: relative;
+            left: 7.5%;
+            width: 85%;
+            height: 45px;
+            margin-bottom: 20px;
+            border: 1px solid blue;
+            border-radius: 50px;
+            cursor: pointer; }
+            /* line 167, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+            .notepad .nav .notepads .notepad-dropdown .other-notepads .other-notepad p {
+              margin-left: 50px;
+              overflow: hidden; }
+  /* line 185, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+  .notepad .active-note {
+    height: 100%;
+    width: calc(100% - 301px);
+    background: black;
+    border-radius: 50px;
+    float: right; }
+    /* line 193, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+    .notepad .active-note .toolbar {
+      position: relative;
+      top: 20px;
+      left: 9%;
+      height: 65px;
+      height: 300px;
+      width: 82%;
+      background: blue;
+      display: flex;
+      align-content: center;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap; }
+      /* line 215, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+      .notepad .active-note .toolbar .rte {
+        position: relative;
+        left: 10px;
+        display: flex;
+        align-content: center; }
+        /* line 225, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+        .notepad .active-note .toolbar .rte button {
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+          border: none;
+          border-radius: 50px;
+          background: black;
+          display: inline-block;
+          font-family: Comfortaa;
+          font-size: 19px;
+          cursor: pointer; }
+          /* line 244, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+          .notepad .active-note .toolbar .rte button p {
+            margin: 0;
+            text-align: center;
+            color: white; }
+        /* line 256, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+        .notepad .active-note .toolbar .rte .font-colors-dropdown, .notepad .active-note .toolbar .rte .font-backgrounds-dropdown {
+          display: none;
+          position: absolute;
+          top: 90px;
+          right: 0;
+          width: 150px;
+          height: 150px;
+          padding: 10px;
+          border: 1px solid pink;
+          border-radius: 20px;
+          z-index: 100; }
+          /* line 274, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+          .notepad .active-note .toolbar .rte .font-colors-dropdown button, .notepad .active-note .toolbar .rte .font-backgrounds-dropdown button {
+            width: 20px;
+            height: 20px; }
+        /* line 283, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+        .notepad .active-note .toolbar .rte .fonts {
+          width: 130px;
+          height: 45px;
+          border-radius: 50px;
+          border: 1px solid yellow;
+          display: inline-block;
+          text-align: center;
+          cursor: pointer; }
+          /* line 298, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+          .notepad .active-note .toolbar .rte .fonts p {
+            margin: 14px 0 0 0; }
+          /* line 304, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+          .notepad .active-note .toolbar .rte .fonts .other-fonts {
+            display: none; }
+      /* line 314, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+      .notepad .active-note .toolbar .actions {
+        position: relative;
+        left: 100px; }
+    /* line 325, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+    .notepad .active-note .note {
+      position: relative;
+      bottom: 210px;
+      left: 5%;
+      height: 80%;
+      width: 90%;
+      border-radius: 50px;
+      background: #fff; }
+      /* line 338, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+      .notepad .active-note .note .contents {
+        position: relative;
+        left: 5%;
+        top: 7%;
+        width: 90%;
+        height: 90%;
+        border-radius: 50px; }
+        /* line 350, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+        .notepad .active-note .note .contents .active-note-title {
+          margin: 0;
+          margin-bottom: 20px;
+          background: none;
+          border: none;
+          font-family: Comfortaa;
+          font-size: 22px;
+          font-weight: bold; }
+        /* line 366, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+        .notepad .active-note .note .contents .active-note-content {
+          cursor: text; }
+  /* line 379, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+  .notepad .add-note-btn {
+    position: relative;
+    top: 40px;
+    left: 17.5%;
+    width: 65%;
+    height: 35px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Comfortaa; }
+  /* line 400, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+  .notepad .notes {
+    position: relative;
+    left: 7.5%;
+    top: 60px;
+    border: 1px solid yellow;
+    width: 85%;
+    max-height: 70%;
+    overflow-x: hidden;
+    overflow-y: auto; }
+    /* line 414, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+    .notepad .notes .note {
+      position: relative;
+      width: 100%;
+      margin-bottom: 20px;
+      border: 1px solid red;
+      border-radius: 50px;
+      cursor: pointer; }
+      /* line 427, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+      .notepad .notes .note p {
+        position: relative;
+        left: 0;
+        margin-left: 22px; }
+
+/* line 441, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+.no-notepads-wrapper {
+  position: relative;
+  margin: 0;
+  width: 400px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  /* line 457, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+  .no-notepads-wrapper div {
+    text-align: center; }
+
+/* Pop-ups */
+/* line 468, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none; }
+
+/* line 488, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+.notepad-form-wrapper {
+  display: none; }
+  /* line 492, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+  .notepad-form-wrapper .notepad-title-error {
+    display: none; }

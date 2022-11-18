@@ -1,0 +1,174 @@
+
+button {
+
+    cursor: pointer;
+    font-family: Comfortaa;
+
+
+    border-radius: 50px;
+
+}
+
+.create-notepad-form {
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background: rgba(0, 0, 0 , 0.7);
+    
+    z-index: 10;
+
+    display: none;
+
+    .create-notepad-form-wrapper {
+
+        position: relative;
+        top: 35%;
+        left: 30%;
+
+        width: 40%;
+        height: 30%;
+
+        padding: 20px;
+
+        background: #fff;
+        opacity: 1;
+
+        border-radius: 40px;
+
+        .close-btn {
+
+            position: absolute;
+            right: 5%;
+            top: 5%;
+
+            width: 40px;
+            height: 40px;
+
+            background: red;
+
+            border: 1 px solid red;
+            border-radius: 30px;
+
+            font-weight: bold;
+            z-index: 15;
+
+        }
+
+        .form-title {
+
+            position: relative;
+            left: 10px;
+            bottom: 0;
+            margin: 0;
+
+        }
+
+        #notepad-title {
+
+            position: relative;
+            top: 20px;
+            left: 2%;
+
+        }
+
+
+
+        .colors-wrapper {
+
+            position: relative;
+            top: 20px;
+            left: 2%;
+
+            .colors {
+
+                position: relative;
+                top: 5px;
+    
+                button {
+    
+                    width: 20px;
+                    height: 20px;
+
+                    margin-right: 5px;
+    
+                    border: 0.5px solid black; /* Depends on mode */
+                    border-radius: 50px;
+    
+                }
+    
+            }
+
+            #custom-color {
+
+                position: relative;
+
+                top: 20px;
+
+            }
+
+        }   
+
+        .create-notepad-title-error {
+
+            display: none;
+    
+        }
+
+        .create-notepad-btn {
+
+            position: absolute;
+
+            bottom: 20px;
+            right: 30px;
+
+
+        }
+
+    }
+
+  
+
+}
+
+.edit-notepad-form {
+
+    display: none;
+
+    .edit-notepad-title-error {
+
+        display: none;
+
+    }
+
+}
+
+.move-notepad-form {
+
+    display: none;
+
+    z-index: 10;
+
+    border: 1px solid pink;
+
+    border-radius: 50px;
+
+    
+
+    .notepad-option {
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50px;
+
+        color: white;
+
+    }
+
+}

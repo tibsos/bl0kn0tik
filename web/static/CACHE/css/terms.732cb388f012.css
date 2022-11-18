@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* line 1, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+ol {
+  counter-reset: item; }
+
+/* line 2, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+li {
+  display: block; }
+
+/* line 3, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item; }
+
+/* line 5, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+h4 {
+  margin: 0;
+  padding: 0; }
+
+/* line 12, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+.side-nav {
+  position: relative;
+  top: 100px;
+  left: 5%;
+  width: 300px;
+  border-radius: 50px;
+  background: #fff;
+  float: left; }
+  /* line 26, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+  .side-nav a {
+    text-decoration: none;
+    color: #000; }
+  /* line 33, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+  .side-nav div {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid pink;
+    cursor: pointer; }
+    /* line 50, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+    .side-nav div h4 {
+      padding-left: 10px;
+      font-size: 18px; }
+
+/* line 61, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+.main-wrapper {
+  position: relative;
+  left: 0;
+  top: 100px;
+  width: calc(100% - 450px);
+  padding: 20px;
+  float: right;
+  border-radius: 50px;
+  background: #fff; }

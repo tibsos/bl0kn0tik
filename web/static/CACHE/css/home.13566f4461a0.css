@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* line 1, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+/* line 16, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+.notepad {
+  position: relative;
+  left: 2.5%;
+  top: 100px;
+  height: 80%;
+  width: 95%;
+  border: 1px solid black;
+  border-radius: 50px; }
+  /* line 30, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+  .notepad .nav {
+    width: 300px;
+    height: 100%;
+    border-right: 1px solid black;
+    border-radius: 50px;
+    float: left; }
+  /* line 42, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+  .notepad .active-note {
+    height: 100%;
+    width: calc(100% - 301px);
+    background: black;
+    border-radius: 50px;
+    float: right; }

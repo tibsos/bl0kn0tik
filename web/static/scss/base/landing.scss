@@ -3,12 +3,11 @@ html, body {
     height: 100%;
     width: 100%;
 
-    position: relative;
-
     top: 0;
     left: 0;
 
     margin: 0;
+    padding: 0;
 
 }
 
@@ -22,11 +21,6 @@ button {
 
 .main-wrapper {
 
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
     height: 100%;
     width: 100%;
 
@@ -39,112 +33,83 @@ button {
 }
 
 
-.top-nav {
-
-    position: relative;
-
-    .logo {
-
-        position: relative;
-        left: 20px;
-        top: 20px;
-
-        width: 60%;
-
-        cursor: pointer;
-
-        float: left;
-
-        h1 {
-
-            margin: 0;
-
-            color: #000;
-
-        }
-
-    }
-
-    .buttons {
-
-        position: relative;
-        top: 12px;
-
-        width: 40%;
-
-        float: right;
-
-        .login-btn {
-
-            position: absolute;
-
-            right: 50px;
-
-            padding: 15px;
-
-            font-size: 17px;
-
-            background-color: transparent;
-
-            border: 1px solid blue;
-            border-radius: 10px;
-
-        }
-
-    }
-
-}
-
-
 .content {
 
     position: relative;
 
-    top: 200px;
+    top: 160px;
 
     width: 100%;
 
     .text {
 
         position: relative;
-        left: 0;
+        left: 8%;
 
         width: 40%;
         
-        border: 1px solid black;
+        border: 1px solid transparent;
         
         color: #000;
 
         float: left;
+
+        h1 {
+
+            font-size: 50px;
+
+        }
+
+        h2 {
+
+            margin-top: 60px;
+
+        }
+
+        button {
+
+            margin-top: 50px;
+
+            background: none;
+
+            border: 2px solid black;
+            border-radius: 50px;
+
+            width: 200px;
+            height: 50px;
+
+
+        }
 
     }
 
     .pic {
 
         position: relative;
-        left: 5%;
-        bottom: 300px;
+        left: 10%;
+        bottom: 450px;
 
         width: 60%;
         
         float: right;
 
+        img {
+
+            margin: 0;
+            padding: 0;
+
+        }
+
     }
 
 }
 
+@media screen and (max-width: 1500px){
 
-.bottom-nav {
+    img {
 
-    position: fixed;
-    
-    bottom: 30px;
-    left: 10%;
+        scale: 0.8;
 
-    height: 50px;
-    width: 80%;
-
-
-    border: 1px solid black;
+    }
 
 }

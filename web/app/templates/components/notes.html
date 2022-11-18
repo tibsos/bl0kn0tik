@@ -1,0 +1,38 @@
+
+<form>
+
+    {% csrf_token %}
+
+    {% for note in notes %}
+
+        <div class="note" hx-get="{% url 'app:get-note' note.uid %}" hx-trigger="click delay:2s;" hx-target=".notepad">
+
+            {% if note.pinned %}
+
+
+
+            {% endif %}
+
+            {% if note.title %}
+
+                <p>
+
+                    {{ note.title }}
+
+                </p>
+
+            {% else %}
+
+                <p>
+
+                    Без названия
+
+                </p>
+
+            {% endif %}
+
+        </div>
+
+    {% endfor%}
+
+</form>

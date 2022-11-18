@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* line 3, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/pop-ups.scss */
+.create-notepad-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  display: none; }
+  /* line 24, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/pop-ups.scss */
+  .create-notepad-form .create-notepad-title-error {
+    display: none; }
+
+/* line 32, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/pop-ups.scss */
+.edit-notepad-form {
+  display: none; }
+  /* line 36, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/pop-ups.scss */
+  .edit-notepad-form .edit-notepad-title-error {
+    display: none; }
+
+/* line 44, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/pop-ups.scss */
+.move-notepad-form {
+  display: none;
+  z-index: 10;
+  border: 1px solid pink;
+  border-radius: 50px; }
+  /* line 56, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/pop-ups.scss */
+  .move-notepad-form .notepad-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    color: white; }

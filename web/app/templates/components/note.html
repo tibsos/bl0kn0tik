@@ -1,0 +1,272 @@
+<div class="toolbar">
+
+    <div class="contents">
+
+        <div class="rte">
+
+            <button class="bold">
+    
+                <p><strong>Ж</strong></p>
+    
+            </button>
+    
+            <button class="italic">
+    
+                <p><i>К</i></p>
+    
+            </button>
+    
+            <button class="underline">
+    
+                <p><u>C</u></p>
+    
+            </button>
+    
+            <button class="strike">
+    
+                <p><strike>О</strike></p>
+    
+            </button>
+    
+            <button class="ul">
+    
+                <p>UL</p>
+    
+            </button>
+    
+            <button class="ol">
+    
+                <p>OL</p>
+    
+            </button>
+
+            <button class="upload-image-init">
+
+                <p>I</p>
+
+            </button>
+
+            <form hx-encoding="multipart/form-data"
+                    hx-post="{% url 'app:upload-image' %}"
+                    hx-target=".active-note"
+                >
+
+                    {% csrf_token %}
+
+                    <input type="file" id="image-file" name="image" onChange="upload_image()" hidden>
+
+                    <button id='upload-image-btn' style='display: none;'></button>
+                    
+             
+            </form>
+
+        </div>
+    
+        <div class="actions">
+    
+            <form>
+    
+                {% csrf_token %}
+    
+                <button hx-post="{% url 'app:pin-note' %}" hx-target=".notepad">
+    
+                    P
+            
+                </button>
+
+                
+                {% if notepads %}
+
+                    <button id="move-notepad-init">
+
+                        M
+
+                    </button>
+
+                {% endif %}
+
+
+
+                <button hx-post="{% url 'app:delete-note' %}" hx-target=".notepad">
+    
+                    D
+            
+                </button>
+
+    
+            </form>
+            
+    
+        </div>
+        
+    </div>
+
+
+</div>
+
+<div class="note">
+
+    <div class="contents">
+
+        {% if active_note.images.all %}
+
+            <div class="images">
+
+                {% for image in active_note.images.all %}
+
+                    <div class='img'>
+
+                        <img src="{{ image.file.url }}">
+
+                        <div class="delete-img-btn">
+
+                            <button hx-delete="{% url 'app:delete-image' image.uid %}" hx-target=".active-note">D</button>
+
+                        </div>
+                    
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% endif %}
+
+        <input type="text" class='active-note-title' value="{{ active_note.title }}" placeholder="Заголовок">
+        <div contenteditable="true" class='active-note-content'  placeholder="Я помню чудное мгновение...">{{ active_note.content | safe}}</div>
+    
+    </div>
+
+</div>
+
+<script>
+
+    var active_note_content = $('.active-note-content');
+
+    $('#move-notepad-init').click(function() {
+
+        $('.shadow').show();
+        $('.move-notepad-form').show();
+        
+    })
+
+    /* Image upload */
+
+    $('.upload-image-init').click(function() {
+
+        $('#image-file').click();
+
+    });
+
+    function upload_image() {
+
+        $('#upload-image-btn').click();
+
+    }
+
+    $('.bold').click(function() {
+
+        document.execCommand('bold');
+        active_note_content.focus();
+
+    })
+
+    $('.italic').click(function() {
+
+        document.execCommand('italic');
+        active_note_content.focus();
+
+    })
+
+    $('.underline').click(function() {
+
+        document.execCommand('underline');
+        active_note_content.focus();
+
+    })
+
+    $('.strike').click(function() {
+
+        document.execCommand('strikeThrough');
+        active_note_content.focus();
+
+    })
+
+    $('.ul').click(function() {
+
+        document.execCommand('insertUnorderedList');
+        active_note_content.focus();
+
+    })
+
+    $('.ol').click(function() {
+
+        document.execCommand('insertOrderedList');
+        active_note_content.focus();
+
+    })
+
+</script>
+
+<script>
+
+    var timer;
+
+    $('.active-note-title, .active-note-content').on('keyup', function(){
+
+        clearInterval(timer);  //clear any interval on key up
+        timer = setTimeout(function() { 
+
+            update_note();
+
+        }, 250);
+
+    });
+
+    $('.add-note-btn, .notes, .notepads').on('mouseenter', function() {
+
+        update_note();
+
+    });
+
+    var title;
+    var content;
+
+    function update_note() {
+
+        title = $('.active-note-title').val();
+        content = $('.active-note-content').html();
+
+        $.ajax({
+
+            method: 'POST',
+            url: "{% url 'app:update-note' %}",
+            data: {
+
+                'csrfmiddlewaretoken': "{{ csrf_token }}",
+                'title': title,
+                'content': content,
+
+            }
+
+        })
+
+    }
+
+    $('.active-note-title').on('keyup', function() {
+
+        title = $('.active-note-title').val();
+
+        if (title === '') {
+
+            $('.note.active').children('p').text('Без названия');
+
+        } else {
+
+            $('.note.active').children('p').text(title);
+
+        }
+        
+    })
+
+</script>

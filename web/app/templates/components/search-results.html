@@ -1,0 +1,29 @@
+{% if search_results %}
+
+<div class='search-results-wrapper'>
+
+    {% for note in search_results %}
+
+        <div class="note-result">
+
+            <h4>
+
+                {{ note.title }}
+    
+            </h4>    
+
+        </div>
+
+    {% endfor %}
+        
+</div>
+
+{% else %}
+
+    <h4>
+
+        Ничего не найдено
+
+    </h4>
+
+{% endif %}

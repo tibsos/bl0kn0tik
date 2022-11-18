@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/* line 3, c:/users/следователь/documents/bl0kn0tik/web/static/scss/user/register.scss */
+.form {
+  height: 500px;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 50px;
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.62); }
+  /* line 28, c:/users/следователь/documents/bl0kn0tik/web/static/scss/user/register.scss */
+  .form .logo h1 {
+    text-align: center; }
+  /* line 38, c:/users/следователь/documents/bl0kn0tik/web/static/scss/user/register.scss */
+  .form .fields div {
+    position: relative;
+    top: 70px;
+    text-align: center;
+    margin-bottom: 20px; }
+    /* line 45, c:/users/следователь/documents/bl0kn0tik/web/static/scss/user/register.scss */
+    .form .fields div input {
+      width: 250px;
+      height: 45px;
+      border-radius: 30px;
+      padding-left: 40px;
+      font-family: Comfortaa;
+      font-weight: bold;
+      font-size: 19px; }
+  /* line 64, c:/users/следователь/documents/bl0kn0tik/web/static/scss/user/register.scss */
+  .form button {
+    position: absolute;
+    left: 50px;
+    bottom: 35px;
+    width: 300px;
+    height: 45px;
+    border-radius: 50px;
+    border: 2px solid black;
+    background: none;
+    font-weight: bold;
+    font-family: Comfortaa;
+    font-size: 18px;
+    cursor: pointer; }
+
+/* line 88, c:/users/следователь/documents/bl0kn0tik/web/static/scss/user/register.scss */
+.copyright {
+  position: absolute;
+  right: 20px;
+  bottom: 20px; }
+
+@property --x0 {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false; }
+
+@keyframes x0 {
+  0% {
+    --x0: 25% ; }
+  100% {
+    --x0: 75% ; } }
+
+@property --y0 {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false; }
+
+@keyframes y0 {
+  0% {
+    --y0: 25% ; }
+  100% {
+    --y0: 75% ; } }
+
+@property --x1 {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false; }
+
+@keyframes x1 {
+  0% {
+    --x1: 25% ; }
+  100% {
+    --x1: 75% ; } }
+
+@property --y1 {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false; }
+
+@keyframes y1 {
+  0% {
+    --y1: 25% ; }
+  100% {
+    --y1: 75% ; } }
+
+@property --x2 {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false; }
+
+@keyframes x2 {
+  0% {
+    --x2: 25% ; }
+  100% {
+    --x2: 75% ; } }
+
+@property --y2 {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false; }
+
+@keyframes y2 {
+  0% {
+    --y2: 25% ; }
+  100% {
+    --y2: 75% ; } }
+
+@property --x3 {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false; }
+
+@keyframes x3 {
+  0% {
+    --x3: 25% ; }
+  100% {
+    --x3: 75% ; } }
+
+@property --y3 {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false; }
+
+@keyframes y3 {
+  0% {
+    --y3: 25% ; }
+  100% {
+    --y3: 75% ; } }
+
+@property --x4 {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false; }
+
+@keyframes x4 {
+  0% {
+    --x4: 25% ; }
+  100% {
+    --x4: 75% ; } }
+
+@property --y4 {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false; }
+
+@keyframes y4 {
+  0% {
+    --y4: 25% ; }
+  100% {
+    --y4: 75% ; } }
+
+@property --x5 {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false; }
+
+@keyframes x5 {
+  0% {
+    --x5: 25% ; }
+  100% {
+    --x5: 75% ; } }
+
+@property --y5 {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false; }
+
+@keyframes y5 {
+  0% {
+    --y5: 25% ; }
+  100% {
+    --y5: 75% ; } }
+
+/* line 134, c:/users/следователь/documents/bl0kn0tik/web/static/scss/user/register.scss */
+html {
+  height: 100%;
+  background: radial-gradient(circle at var(--x0, 19%) var(--y0, 8%), #f94144, transparent 35%), radial-gradient(circle at var(--x1, 52%) var(--y1, 4%), #f3722c, transparent 35%), radial-gradient(circle at var(--x2, 56%) var(--y2, 63%), #f8961e, transparent 35%), radial-gradient(circle at var(--x3, 5%) var(--y3, 31%), #90be6d, transparent 35%), radial-gradient(circle at var(--x4, 28%) var(--y4, 4%), #43aa8b, transparent 35%), radial-gradient(circle at var(--x5, 24%) var(--y5, 45%), #577590, transparent 35%) #f9c74f;
+  background-position: 50%;
+  animation: x0 4.5s -4.095s alternate, y0 4.5s -6.345s alternate, x1 2.5s -2.175s alternate-reverse, y1 2.5s -3.425s alternate-reverse, x2 6.5s -5.72s alternate, y2 6.5s -8.97s alternate-reverse, x3 5.5s -0.99s alternate, y3 5.5s -3.74s alternate-reverse, x4 3.5s -1.715s alternate, y4 3.5s -3.465s alternate-reverse, x5 2.5s -0.025s alternate, y5 2.5s -1.275s alternate-reverse;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }

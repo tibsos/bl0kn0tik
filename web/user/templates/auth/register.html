@@ -1,0 +1,133 @@
+{% load static %}
+{% load compress %}
+
+<!DOCTYPE html>
+
+<html lang="ru">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        
+        {% compress css %}
+        
+           <link rel="stylesheet" href="{% static 'scss/user/register.scss' %}" type="text/x-scss" />
+        
+        {% endcompress %}
+
+        <title>
+
+            Зарегистрируйтесь в Блокнотике
+
+        </title>
+
+        <meta name="description" content="">
+
+        <link href="{% static 'logo.jpg' %}" rel="shortcut icon" />
+
+    </head>
+
+    <body>
+
+        
+
+        <div class="form">
+
+            <a href="{% url 'base:landing' %}">
+
+                <div class="logo">
+
+                    <h1>
+        
+                        Блокнотик
+                        
+                    </h1>
+        
+                </div>
+
+            </a>
+            
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <div class="fields">
+
+                    <div class="username">
+
+                        <input name="username" id="username" placeholder="Электронная почта">
+        
+                    </div>
+        
+                    <div class="name">
+        
+                        <input name="name" id="name" placeholder="Ваше имя">
+        
+                    </div>
+        
+                    <div class="password">
+        
+                        <input name="password1" id="password" placeholder="Пароль">
+        
+                    </div>
+
+                </div>
+
+                <button type="submit">
+
+                    Зарегистрироваться
+
+                </button>
+
+                <a href="{% url 'user:login' %}">
+
+                    Уже есть аккаунт?
+
+                </a>
+
+            </form>
+
+          
+
+        </div>
+
+        <div class="copyright">
+
+            <p>©2022
+            <a href="{% url 'base:landing' ">Блокнотик</a>
+        </p>
+
+        </div>
+
+        
+    </body>
+
+    <style>
+
+        @font-face {
+            font-family: Comfortaa;
+            src: url("{% static 'fonts/Comfortaa.ttf' %}");
+        }
+
+        body {
+
+            font-family: Comfortaa;
+
+        }
+
+    </style>
+
+    <script>
+
+        
+
+    </script>
+
+
+
+</html>

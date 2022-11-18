@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* line 1, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+.side-nav {
+  position: relative;
+  top: 30px;
+  border-radius: 50px;
+  background: #fff;
+  float: left; }
+  /* line 13, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+  .side-nav div {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid pink;
+    cursor: pointer; }
+    /* line 26, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+    .side-nav div h4 {
+      padding-left: 10px;
+      font-size: 18px; }
+
+/* line 37, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/terms.scss */
+.main-wrapper {
+  position: relative;
+  top: 30px;
+  width: 60%;
+  padding: 10px;
+  float: right;
+  border-radius: 50px;
+  background: #fff; }

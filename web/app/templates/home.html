@@ -1,0 +1,158 @@
+{% load static %}
+{% load compress %}
+
+<!DOCTYPE html>
+
+<html lang="ru">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+        
+        {% compress css %}
+        
+        <link rel="stylesheet" href="{% static 'scss/app/pop-ups.scss' %}" type="text/x-scss" />
+           <link rel="stylesheet" href="{% static 'scss/app/home.scss' %}" type="text/x-scss" />
+        
+        {% endcompress %}
+
+        <title>
+
+            Блокнотик
+
+        </title>
+
+        <meta name="description" content="">
+
+        <link href="{% static 'logo.jpg' %}" rel="shortcut icon" />
+
+    </head>
+
+    <body>
+
+        <div class='nav' hidden>
+
+
+            <div class="search">
+
+                <input type="text" class="search-field"
+                    hx-post="{% url 'app:search-note' %}" 
+                    hx-trigger="keyup changed delay:500ms"
+                    name="query"
+                    hx-target=".search-results"
+                    placeholder='Искать заметки' />
+
+                <div class="search-results">
+
+                    {% include 'components/search-results.html' %}
+
+                </div>
+
+            </div>
+            
+
+            <div class="profile-btn">
+
+                {% if profile.avatar %}
+
+                    <img src="{{ profile.avatar.url }}" alt="d">
+
+                {% else %}
+
+                    <h4>
+
+                        {{ profile.initials }}
+
+                    </h4>
+
+                {% endif %}
+
+            </div>
+
+            <div class="profile-dropdown">
+
+                <a href="{% url 'user:logout' %}">
+
+                    Мой аккаунт
+
+                </a>
+
+
+                <div class="contact">
+
+                    <a href="{% url 'user:logout' %}">
+
+                        Задать вопрос
+    
+                    </a>
+
+                </div>
+
+                <div class="logout">
+
+                    <a href="{% url 'user:logout' %}">
+
+                        Выйти
+    
+                    </a>
+
+                </div>
+                
+
+            </div>
+
+
+        </div>
+
+        <div class="notepad" id="notepad">
+
+            {% include 'components/notepad.html' %}
+
+        </div>
+
+        {% include 'components/pop-ups.html' %}
+
+    </body>
+
+    <style>
+
+        @font-face {
+            font-family: Comfortaa;
+            src: url("{% static 'fonts/Comfortaa.ttf' %}");
+        }
+
+        body {
+
+            font-family: Comfortaa;
+
+        }
+        
+
+    </style>
+
+    <script>
+
+        document.body.addEventListener('htmx:configRequest',(event)=>{
+            event.detail.headers['X-CSRFToken']="{{csrf_token}}";
+        })
+
+        $('.search-field').on('focus', function() {
+
+            $('.search-results').show();
+
+        })
+
+        $('.search-field').on('focusout', function() {
+
+            $('.search-results').hide();
+
+        })
+
+    </script>
+
+</html>

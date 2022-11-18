@@ -1,0 +1,201 @@
+<div class="create-notepad-form">
+
+    <div class="create-notepad-form-wrapper">
+    
+        <button class="close-btn">
+
+            X
+
+        </button>
+
+        <h2 class="form-title">
+
+            Создать блокнот
+
+        </h2>
+
+        <form>
+
+            {% csrf_token %}
+    
+            <input type="text" name="title" id="notepad-title" placeholder="Заголовок">
+
+            <p class="create-notepad-title-error">
+
+                Блокнотику нужен заголовок
+
+            </p>
+
+            <input type="text" name="color" id="notepad-color" hidden>
+
+
+            <div class="colors-wrapper">
+
+                <h4 class="section-title">
+
+                    Цвет
+    
+                </h4>
+    
+                <div class="colors">
+    
+                    <button id="#000" style="background: #000"></button>
+                    <button id="#fff" style="background: #fff"></button>
+                    <button id="#999999" style="background: #999999"></button>
+                    <button id="#FF0000" style="background: #FF0000"></button>
+                    <button id="#FFA500" style="background: #FFA500"></button>
+                    <button id="#FFF000" style="background: #FFF000"></button>
+                    <button id="#800000" style="background: #800000"></button>
+                    <button id="#008000" style="background: #008000"></button>
+                    <button id="#0000FF" style="background: #0000FF"></button>
+                    <button id="#00FFFF" style="background: #00FFFF"></button>
+                    <button id="#FF00FF" style="background: #FF00FF"></button>
+    
+                </div>
+
+                <button id="custom-color">
+
+                    Свой цвет
+    
+                </button>
+
+            </div>
+            
+
+           
+
+            <button hx-post="{% url 'app:create-notepad' %}" hx-target=".notepad" class="create-notepad-btn" disabled="true">
+        
+                Создать блокнот
+        
+            </button>
+    
+        </form>
+
+    </div>
+
+</div>
+
+<div class='edit-notepad-form'>
+
+    <div class='edit-notepad-form-wrapper'>
+
+        <button class="close-edit-notepad-form-btn">
+
+            X
+    
+        </button>
+    
+        <button class="delete-notepad-btn" hx-delete="{% url 'app:delete-notepad' %}" hx-target='.notepad'>
+    
+            D
+    
+        </button>
+    
+        <form>
+    
+            {% csrf_token %}
+    
+            <input type="text" name="title" id="edit-notepad-title" placeholder="Заголовок">
+    
+            <p class="notepad-title-error" >
+    
+                Блокнотику нужен заголовок
+    
+            </p>
+    
+            <input type="text" name="color" id="notepad-color">
+    
+            <button hx-post="{% url 'app:edit-notepad' %}" hx-target=".notepads" class="edit-notepad-btn">
+        
+                Сохранить
+        
+            </button>
+    
+        </form>
+
+    </div>
+
+</div>
+
+<div class='move-notepad-form'>
+
+    {% if notepads %}
+
+        <div class="move-notepad-form-wrapper">
+
+            <form>
+
+                {% for notepad in notepads %}
+
+                    <div class="notepad-option" hx-post="{% url 'app:move-note' notepad.uid %}" hx-target=".notepad">
+
+                        <p>
+
+                            {{ notepad.title }}
+
+                        </p>
+
+                    </div>    
+            
+                {% endfor %}
+
+            </form>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+
+<script>
+
+    var shadow = $('.shadow');
+
+    var notepad_title = $('#notepad-title');
+    var notepad_color = $('#notepad-color');
+    var notepad_title_error = $('.notepad-title-error');
+    var create_notepad_btn = $('.create-notepad-btn');
+
+    $('.close-btn, .create-notepad-btn').click(function() {
+
+        $('.create-notepad-form').hide();
+
+    });
+
+    $('.close-btn, .edit-notepad-btn, .delete-notepad-btn').click(function() {
+
+        $('.edit-notepad-form-wrapper').hide();
+
+    });
+
+    $('.notepad-option').click(function() {
+
+        $('.move-notepad-form').hide();
+
+    });
+
+
+    notepad_title.on('keyup', function() {
+        
+        if (notepad_title.val() === '') {
+
+            notepad_title_error.show();
+            create_notepad_btn.prop('disabled', true);
+
+        } else {
+
+            notepad_title_error.hide();
+            create_notepad_btn.prop('disabled', false);
+
+        }
+
+    })
+
+    
+
+
+</script>
+
+

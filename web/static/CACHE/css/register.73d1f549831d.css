@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* line 3, c:/users/следователь/documents/bl0kn0tik/web/static/scss/user/register.scss */
+.form {
+  height: 500px;
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  justify-content: center; }
+  /* line 21, c:/users/следователь/documents/bl0kn0tik/web/static/scss/user/register.scss */
+  .form div {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    margin-bottom: 20px; }

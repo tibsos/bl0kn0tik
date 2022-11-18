@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* line 1, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+/* line 14, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/home.scss */
+.notepad {
+  position: relative;
+  left: 2.5%;
+  height: 80%;
+  width: 95%;
+  border: 1px solid black;
+  border-radius: 50px; }

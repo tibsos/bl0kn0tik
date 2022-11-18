@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* line 3, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/nav.scss */
+.top-nav {
+  position: relative; }
+  /* line 7, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/nav.scss */
+  .top-nav .logo {
+    position: relative;
+    left: 20px;
+    top: 20px;
+    width: 60%;
+    cursor: pointer;
+    float: left; }
+    /* line 19, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/nav.scss */
+    .top-nav .logo h1 {
+      margin: 0;
+      color: #000; }
+  /* line 29, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/nav.scss */
+  .top-nav .buttons {
+    position: relative;
+    top: 12px;
+    width: 40%;
+    float: right; }
+    /* line 38, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/nav.scss */
+    .top-nav .buttons .login-btn {
+      position: absolute;
+      right: 50px;
+      padding: 15px;
+      font-size: 17px;
+      background-color: transparent;
+      border: 2px solid blue;
+      border-radius: 50px; }
+
+/* line 62, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/nav.scss */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  height: 10px;
+  width: 90%; }
+  /* line 71, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/nav.scss */
+  .bottom-nav h1 {
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0 100px 0 0;
+    float: left; }
+  /* line 83, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/nav.scss */
+  .bottom-nav div {
+    text-align: center;
+    width: 100%; }
+  /* line 90, c:/users/следователь/documents/bl0kn0tik/web/static/scss/base/nav.scss */
+  .bottom-nav a {
+    text-decoration: none;
+    margin: 0 20px 0 0; }

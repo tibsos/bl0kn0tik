@@ -8,8 +8,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-
 DJANGO_APPS = [
 
     'django.contrib.admin',
@@ -30,6 +28,8 @@ THIRD_PARTY_APPS = [
 PROJECT_APPS = [
 
     'base',
+    'user',
+    'app',
 
 ]
 
@@ -55,7 +55,9 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
 
-            'base/templates'
+            'base/templates',
+            'user/templates',
+            'app/templates',
 
         ],
         'APP_DIRS': True,
@@ -104,6 +106,7 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Static
 STATIC_URL = '/static/'
 
 STATIC_ROOT = 'static'
@@ -114,6 +117,8 @@ STATICFILES_DIRS = (
 
 )
 
+
+# SCSS
 STATICFILES_FINDERS = [
 
     'compressor.finders.CompressorFinder'
@@ -124,5 +129,20 @@ COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
 
+# Media
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media'
+
+# Email
+EMAIL_HOST = 'mail.hosting.reg.ru'
+EMAIL_HOST_USER = 'support@bloknot-ik.ru'
+EMAIL_HOST_PASSWORD = ''
+DEFAULT_FROM_EMAIL = 'support@bloknot-ik.ru'
+SERVER_EMAIL = 'support@bloknot-ik.ru'
+
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+
+# Auth
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/login/'

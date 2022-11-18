@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* line 1, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/pop-ups.scss */
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none; }
+
+/* line 21, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/pop-ups.scss */
+.notepad-form-wrapper {
+  display: none; }
+  /* line 25, c:/users/следователь/documents/bl0kn0tik/web/static/scss/app/pop-ups.scss */
+  .notepad-form-wrapper .notepad-title-error {
+    display: none; }

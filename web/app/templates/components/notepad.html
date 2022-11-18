@@ -1,0 +1,89 @@
+{% if active_notepad %}
+
+    
+    <div class="nav">
+
+        {% include 'components/notepad-nav.html' %}
+
+    </div>
+
+    {% if active_note %}
+
+        <div class="active-note">
+            
+            {% include 'components/note.html' %}
+        
+        </div>
+
+    {% else %}
+
+        <div class='no-notes-wrapper'> 
+
+            <div>
+
+                <h1>
+    
+                    Пустовато...
+        
+                </h1>
+        
+                <br>
+                <h2>
+        
+                    Исправим? :)
+        
+                </h2>
+        
+                <button hx-post="{% url 'app:create-note' %}" hx-target='.notepad'>
+        
+                    Создать заметку
+        
+                </button>
+    
+            </div>
+
+        </div>
+
+    {% endif %}
+
+{% else %}
+
+    <div class="no-notepads-wrapper">
+
+        <div>
+
+            <h1>
+
+                Как-то пусто...
+    
+            </h1>
+    
+            <br>
+            <h2>
+    
+                Исправим? :)
+    
+            </h2>
+    
+            <button id="create-notepad-init">
+    
+                Создать блокнот
+    
+            </button>
+
+        </div>
+        
+
+    </div>
+
+{% endif %}
+
+<script>
+
+    $('#create-notepad-init').click(function() {
+
+        $('.create-notepad-form').show();
+
+    });
+
+</script>

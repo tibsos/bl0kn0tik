@@ -1,0 +1,99 @@
+<div class="active-notepad">
+
+    <p>
+
+        {{ active_notepad.title }}
+
+    </p>
+
+    <div class="buttons">
+
+        <button class="edit-notepad">
+
+            E
+
+        </button>
+
+        <button class="show-notepads">
+
+            >
+
+        </button>
+
+    </div>
+
+</div>
+
+<div class="notepad-dropdown">
+
+    <button id="create-notepad-init">
+
+        +
+
+    </button>
+
+    <div class="other-notepads">
+
+        <form>
+
+            {% csrf_token %}
+        
+            {% for notepad in notepads %}
+
+                <div class="other-notepad" hx-get="{% url 'app:get-notepad' notepad.uid %}" hx-target=".notepad">
+
+                    <p>
+
+                        {{ notepad.title }}
+
+                    </p>
+
+                </div>
+                
+            {% endfor %}
+
+        </form>
+
+    </div>
+    
+</div>
+
+<script>
+
+
+    $('#create-notepad-init').click(function() {
+
+        $('.create-notepad-form').show();
+
+    });
+
+    $('.edit-notepad').click(function() {
+
+        $('#edit-notepad-title').val("{{ active_notepad.title }}")
+        $('#notepad-color').val("{{ active_notepad.color }}")
+
+        $('.edit-notepad-form').show();
+
+    });
+
+    var notepad_dropdown_closed = true;
+
+
+    $('.show-notepads').click(function() {
+
+        if (notepad_dropdown_closed === true) {
+
+            notepad_dropdown_closed = false;
+            $('.notepad-dropdown').show()
+
+        } else {
+
+            notepad_dropdown_closed = true;
+            $('.notepad-dropdown').hide();
+        
+        }
+
+    });
+
+    
+</script>
